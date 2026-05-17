@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: goalgrid-postgres
+    environment:
+      POSTGRES_USER: goalgrid
+      POSTGRES_PASSWORD: goalgrid
+      POSTGRES_DB: goalgrid
+    ports:
+      - "5433:5432"
+    volumes:
+      - goalgrid_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U goalgrid -d goalgrid"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  goalgrid_pg:

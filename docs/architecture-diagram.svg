@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620" viewBox="0 0 1120 620" role="img" aria-labelledby="title desc">
+  <title id="title">GoalGrid Architecture Diagram</title>
+  <desc id="desc">Browser users access a Vercel-hosted Next.js frontend, which calls a Render-hosted FastAPI backend connected to managed PostgreSQL. The backend writes audit logs, notifications, reports, analytics and escalation data.</desc>
+  <rect width="1120" height="620" fill="#f7f8fa"/>
+  <style>
+    .box{fill:#fff;stroke:#cbd5e1;stroke-width:2;rx:8}
+    .title{font:700 20px Arial,Helvetica,sans-serif;fill:#1f2933}
+    .label{font:700 15px Arial,Helvetica,sans-serif;fill:#1f2933}
+    .small{font:13px Arial,Helvetica,sans-serif;fill:#475569}
+    .arrow{stroke:#2563eb;stroke-width:3;fill:none;marker-end:url(#arrow)}
+    .muted{fill:#eef2f7;stroke:#d7dce2;stroke-width:1;rx:6}
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <text x="48" y="52" class="title">GoalGrid: In-House Goal Setting &amp; Tracking Portal</text>
+  <text x="48" y="78" class="small">Low-cost hackathon deployment: Vercel frontend, Render FastAPI backend, managed PostgreSQL.</text>
+
+  <rect x="48" y="130" width="220" height="110" class="box"/>
+  <text x="78" y="166" class="label">Employees</text>
+  <text x="78" y="192" class="small">Create goals</text>
+  <text x="78" y="214" class="small">Submit check-ins</text>
+
+  <rect x="48" y="270" width="220" height="110" class="box"/>
+  <text x="78" y="306" class="label">Managers L1</text>
+  <text x="78" y="332" class="small">Approve / return goals</text>
+  <text x="78" y="354" class="small">Add check-in comments</text>
+
+  <rect x="48" y="410" width="220" height="110" class="box"/>
+  <text x="78" y="446" class="label">Admin / HR</text>
+  <text x="78" y="472" class="small">Cycles, reports, unlocks</text>
+  <text x="78" y="494" class="small">Audit and escalations</text>
+
+  <rect x="385" y="180" width="260" height="180" class="box"/>
+  <text x="425" y="220" class="label">Next.js Frontend</text>
+  <text x="425" y="246" class="small">Hosted on Vercel</text>
+  <rect x="420" y="270" width="190" height="34" class="muted"/>
+  <text x="438" y="292" class="small">Role-based UI</text>
+  <rect x="420" y="314" width="190" height="34" class="muted"/>
+  <text x="438" y="336" class="small">Dashboards &amp; forms</text>
+
+  <rect x="760" y="150" width="270" height="230" class="box"/>
+  <text x="800" y="190" class="label">FastAPI Backend</text>
+  <text x="800" y="216" class="small">Hosted on Render</text>
+  <rect x="795" y="240" width="200" height="34" class="muted"/>
+  <text x="812" y="262" class="small">JWT + RBAC</text>
+  <rect x="795" y="284" width="200" height="34" class="muted"/>
+  <text x="812" y="306" class="small">Workflow services</text>
+  <rect x="795" y="328" width="200" height="34" class="muted"/>
+  <text x="812" y="350" class="small">Reports &amp; analytics APIs</text>
+
+  <rect x="760" y="440" width="270" height="110" class="box"/>
+  <text x="800" y="480" class="label">PostgreSQL</text>
+  <text x="800" y="506" class="small">Supabase / Render Postgres</text>
+  <text x="800" y="528" class="small">Goals, check-ins, audit logs</text>
+
+  <path d="M268 185 H385" class="arrow"/>
+  <path d="M268 325 H385" class="arrow"/>
+  <path d="M268 465 C320 465 330 360 385 315" class="arrow"/>
+  <path d="M645 270 H760" class="arrow"/>
+  <path d="M895 380 V440" class="arrow"/>
+  <path d="M760 500 C680 500 690 340 645 310" class="arrow"/>
+  <text x="676" y="252" class="small">HTTPS JSON API</text>
+  <text x="920" y="418" class="small">SQLAlchemy ORM</text>
+</svg>
