@@ -1,4 +1,4 @@
-# goal-setting-tracking-application
+# GoalGrid: Inhouse Goal setting and tracking application
 
 GoalGrid is an audit-ready in-house goal setting and tracking portal for Employee, Manager L1, and Admin/HR workflows. It covers goal creation, manager approval, goal locking, quarterly check-ins, shared KPIs, reporting, audit logs, escalation rules, notifications, and analytics.
 
