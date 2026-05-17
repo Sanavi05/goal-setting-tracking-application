@@ -11,11 +11,12 @@
 ## Backend on Render
 
 1. Create a Python Web Service with root directory `backend`.
-2. Add environment variables from `backend/.env.example`.
-3. Set `DATABASE_URL` to your managed Postgres connection string.
-4. Build command: `pip install -r requirements.txt`.
-5. Start command: `alembic upgrade head && python -m app.db.init_db && uvicorn app.main:app --host 0.0.0.0 --port $PORT`.
-6. The seed script is idempotent: it exits when users already exist.
+2. Use Python 3.11. The repo includes `backend/runtime.txt` with `python-3.11.9`.
+3. Add environment variables from `backend/.env.example`.
+4. Set `DATABASE_URL` to your managed Postgres connection string.
+5. Build command: `pip install -r requirements.txt`.
+6. Start command: `alembic upgrade head && python -m app.db.init_db && uvicorn app.main:app --host 0.0.0.0 --port $PORT`.
+7. The seed script is idempotent: it exits when users already exist.
 
 You can also use the root `render.yaml` blueprint. Set these values in Render after creating the service:
 
