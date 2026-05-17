@@ -11,7 +11,8 @@
 ## Backend on Render
 
 1. Create a Python Web Service with root directory `backend`.
-2. Use Python 3.11. The repo includes `backend/runtime.txt` with `python-3.11.9`.
+2. Use Python 3.11. The repo includes `backend/.python-version` with `3.11.9`.
+   Also set Render environment variable `PYTHON_VERSION=3.11.9` if the dashboard keeps defaulting to Python 3.14.
 3. Add environment variables from `backend/.env.example`.
 4. Set `DATABASE_URL` to your managed Postgres connection string.
 5. Build command: `pip install -r requirements.txt`.
